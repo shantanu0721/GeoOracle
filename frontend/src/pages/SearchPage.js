@@ -20,7 +20,7 @@ function SearchPage({ onSearch }) {
     setLoading(true);
     setError('');
     try {
-      const response = await axios.post('http://127.0.0.1:8000/api/analyze/', {
+      const response = await axios.post('https://geooracle.onrender.com/api/analyze/', {
         topic: topic
       });
       onSearch(topic, response.data);
